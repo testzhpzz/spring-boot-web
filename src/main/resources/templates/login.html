@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>测试管理平台</title>
+
+    
+
+    <!-- Bootstrap core CSS -->
+
+
+    <!-- Favicons -->
+
+
+
+
+
+
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    
+    <!-- Custom styles for this template -->
+    
+  <link rel="stylesheet" href="login.css" media="screen" th:href="@{/css/login.css}"><style id="scrapbee_editing_markers_css">
+    .scrapbee-marker-a1{
+    color:#fff !important;
+    background:#00f !important;
+}
+.scrapbee-marker-a2{
+    color:#f00 !important;
+    background:#f00  !important;
+    color:#fff !important;
+}
+.scrapbee-marker-a3{
+    color:#fff !important;
+    background:#90f  !important;
+}
+.scrapbee-marker-a4{
+    color:#000 !important;
+    background:#0f0  !important;
+}
+.scrapbee-marker-a5{
+    color:#000 !important;
+    background:#0ff  !important;
+}
+.scrapbee-marker-a6{
+    color:#000 !important;
+    background:#fd0  !important;
+}
+.scrapbee-marker-b1{
+    border-bottom:2px solid #00f !important;
+}
+.scrapbee-marker-b2{
+    border-bottom:2px solid #f00 !important;
+}
+.scrapbee-marker-b3{
+    border-bottom:2px dotted #00f !important;
+}
+.scrapbee-marker-b4{
+    border-bottom:2px dotted #f00 !important;
+}
+</style></head>
+  <body class="text-center" style="margin-bottom: 100px; padding-left: 0px; margin-left: 0px;">
+    <form class="form-signin" method="post" th:action="@{/index}">
+  <img class="mb-4" src="5454dc96840086c5e18e6bc381c5f128.svg" alt="" width="72" height="72" th:src="@{/5454dc96840086c5e18e6bc381c5f128.svg}">
+  <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
+        <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+  <label for="inputEmail" class="sr-only" th:text="#{login.username}">username</label>
+  <input type="email" name="username" id="inputEmail" class="form-control" placeholder="Email address" th:placeholder="#{login.username}" required="" autofocus="">
+  <label for="inputPassword" class="sr-only" th:text="#{login.password}">Password</label>
+  <input type="password" name="password"id="inputPassword" class="form-control" placeholder="Password" th:placeholder="#{login.password}" required="">
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> [[#{login.rememberme}]]
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{login.btn}">Sign in</button>
+  <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+        <a class="btn btn-sm" th:href="@{/login.html(l=zh_CN)}">中文</a>
+        <a class="btn btn-sm" th:href="@{/login.html(l=en_US)}">English</a>
+</form>
+
+
+<div></div></body>
+</html>
